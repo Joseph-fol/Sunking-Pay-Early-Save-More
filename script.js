@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return
         }
 
-        if (selectValue == " ") {
-            alert("Please select a Product Category.")
-            return
-        }
+        // if (selectValue == " ") {
+        //     alert("Please select a Product Category.")
+        //     return
+        // }
 
         displayResult()
 
@@ -36,6 +36,7 @@ window.clearAllInputs = function() {
 
     
     document.getElementById("alertReset").style.display = "block"
+
     setTimeout(() => {
         document.getElementById("alertReset").style.display = "none"
     }, 2000)
@@ -47,7 +48,11 @@ window.clearAllInputs = function() {
 
 function formatDate(dateString) {
     const date = new Date(dateString + 'T00:00:00')
-    const options = { day: 'numeric', month: 'long', year: 'numeric' }
+    const options = { 
+        day: 'numeric', 
+        month: 'long', 
+        year: 'numeric' 
+    }
     return date.toLocaleDateString('en-US', options)
 }
 
