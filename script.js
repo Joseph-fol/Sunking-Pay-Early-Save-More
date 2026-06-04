@@ -54,6 +54,8 @@ function formatDate(dateString) {
         year: 'numeric' 
     }
     return date.toLocaleDateString('en-US', options)
+    console.log(date);
+    
 }
 
 function displayResult() {  
