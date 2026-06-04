@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    word-wrap: break-word;
+}
+
+/* Header responsive adjustments */
+.fs-sm-1 {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .fs-sm-1 {
+        font-size: 1.25rem;
+    }
+
+    .fs-5 {
+        font-size: 0.95rem !important;
+    }
+
+    h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .form-label {
+        font-size: 0.95rem;
+    }
+
+    .form-select, .form-control {
+        font-size: 0.95rem;
+        padding: 0.5rem 0.75rem !important;
+    }
+
+    .btn {
+        font-size: 0.95rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .fs-sm-1 {
+        font-size: 1.35rem;
+    }
+}
+
+/* Container responsive adjustments */
+.col-lg-7 {
+    max-width: 100%;
+    padding: 0.75rem;
+}
+
+@media (max-width: 992px) {
+    .col-lg-7 {
+        max-width: 100%;
+    }
+}
+
+/* Cascade container responsive */
+.cascade-container {
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .cascade-container {
+        flex-direction: row;
+    }
+}
+
+.cascade-container .form-group {
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+    .cascade-container .form-group {
+        margin-bottom: 0;
+    }
+}
+
+/* Alert result display responsive */
+#alertResult {
+    overflow-x: hidden;
+}
+
+#alertResult .d-flex {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    #alertResult .d-flex {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+#alertResult .d-flex > div {
+    flex: 1;
+}
+
+/* Result numbers responsive */
+.result-number {
+    font-size: clamp(2rem, 8vw, 4rem);
+    line-height: clamp(1.5rem, 7vw, 3.5rem);
+}
+
+.result-label {
+    font-size: 17px;
+}
+
+/* Clear button responsive */
+.btn-sm-full {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .btn-sm-full {
+        width: auto;
+    }
+}
+
+/* Footer responsive */
+footer {
+    position: relative;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer p {
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    margin: 0;
+}
+
+/* Button responsive */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Badge responsive */
+.badge {
+    font-size: clamp(0.7rem, 2vw, 1rem) !important;
+}
+
+/* Accordion responsive */
+.accordion-button {
+    padding: 0.75rem 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+h5 {
+    margin: 0;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+}
+
+/* Input fields touch-friendly */
+@media (max-width: 576px) {
+    .form-control, .form-select {
+        min-height: 44px;
+    }
+
+    .btn {
+        min-height: 44px;
+    }
+}
